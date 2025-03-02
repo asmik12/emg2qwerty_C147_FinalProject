@@ -1,7 +1,7 @@
 # C147/247 Final Project
 ### Winter 2025 - _Professor Jonathan Kao_
 
-### Student Project By: Zane LaBute, Asmi Kawatkar, Meagan Clarke 
+### Student Project By: Zane LaBute, Asmi Kawatkar, Meagan Clarke, Ashita Singh
 Some very cool people!
 
 ## Setup
