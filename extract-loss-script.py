@@ -1,6 +1,5 @@
 import re
 import sys
-import pandas as pd
 
 def extract_epoch_losses(log_text):
     # This dictionary will store the final loss for each epoch.
@@ -35,13 +34,12 @@ def main():
 
     losses = extract_epoch_losses(log_text)
 
-    # Convert the losses dictionary to a pandas DataFrame.
-    df = pd.DataFrame(list(losses.items()), columns=['Epoch', 'Loss'])
+    # Write the losses to a text file as a simple list.
+    with open('epoch_losses.txt', 'w') as f:
+        for epoch, loss in sorted(losses.items()):
+            f.write(f"{loss}\n")
 
-    # Write the DataFrame to an Excel file.
-    df.to_excel('epoch_losses.xlsx', index=False)
-
-    print("Losses have been written to 'epoch_losses.xlsx'.")
+    print("Losses have been written to 'epoch_losses.txt'.")
 
 if __name__ == "__main__":
     main()
